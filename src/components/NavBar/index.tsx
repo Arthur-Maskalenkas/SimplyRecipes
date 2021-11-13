@@ -15,10 +15,10 @@ const NavBar = () => (
         <Link to="/contact">contact</Link>
       </li>
       <li>
-        <Link to="/tags"></Link>tags
+        <Link to="/tags">tags</Link>
       </li>
       <li>
-        <Link to="recipes">recipes</Link>
+        <Link to="/recipes">recipes</Link>
       </li>
     </ul>
   </S.Wrapper>
