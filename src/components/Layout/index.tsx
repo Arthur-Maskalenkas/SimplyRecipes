@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../NavBar'
 
+import 'normalize.css'
 import '../../styles/main.css'
 
 type LayoutProps = {
