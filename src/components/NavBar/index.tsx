@@ -1,9 +1,8 @@
-import * as S from './styles'
 import React from 'react'
 import { Link } from 'gatsby'
 
 const NavBar = () => (
-  <S.Wrapper>
+  <>
     <ul>
       <li>
         <Link to="/">home</Link>
@@ -21,7 +20,7 @@ const NavBar = () => (
         <Link to="/recipes">recipes</Link>
       </li>
     </ul>
-  </S.Wrapper>
+  </>
 )
 
 export default NavBar

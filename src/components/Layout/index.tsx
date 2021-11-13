@@ -1,16 +1,17 @@
-import * as S from './styles'
 import React from 'react'
 import NavBar from '../NavBar'
+
+import '../../styles/main.css'
 
 type LayoutProps = {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => (
-  <S.Wrapper>
+  <div>
     <NavBar />
     {children}
-  </S.Wrapper>
+  </div>
 )
 
 export default Layout
