@@ -2,9 +2,16 @@ import { StaticImage } from 'gatsby-plugin-image'
 import * as React from 'react'
 import Layout from '../components/Layout'
 
-const Index = () => (
+import { graphql } from 'gatsby'
+
+type IndexProps = {
+  data: any
+}
+
+const Index = ({ data }: IndexProps) => (
   <Layout>
     <main className="page">
+      <h1>{data.site.siteMetadata.description}</h1>
       <header className="hero">
         <StaticImage
           src="../assets/images/main.jpeg"
@@ -23,5 +30,15 @@ const Index = () => (
     </main>
   </Layout>
 )
+
+export const query = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`
 
 export default Index
