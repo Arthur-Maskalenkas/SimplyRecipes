@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
+.item {
+  margin: 1rem
+}
+
+.wrapper-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper-gallery .item {
+  margin-right: 1rem;
+}
+
+.wrapper-gallery .gallery-img {
+  border-radius: 1rem;
+}
+
 .wrapper-app {
   display: flex;
   flex-direction: column;
