@@ -1,8 +1,39 @@
+import { Link } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 
-const RecipesList = () => (
-  <div>
-    <h1>RecipesList</h1>
+type RecipesProps = {
+  title: string
+  cookTime: number
+  description: string
+  servings: number
+  image: any
+  featured: boolean
+  prepTime: number
+  content: any
+}
+
+type RecipesListProps = {
+  recipes: RecipesProps[]
+}
+
+const RecipesList = ({ recipes }: RecipesListProps) => (
+  <div className="recipes-list">
+    {recipes.map((item, index) => (
+      <Link className="recipe" key={index} to={`/${item.title}`}>
+        <GatsbyImage
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          image={getImage(item.image)}
+          className="recipe-img"
+          alt={item.title}
+        />
+        <h5>{item.title}</h5>
+        <p>
+          Prep: {item.prepTime}min | cook: {item.cookTime}
+        </p>
+      </Link>
+    ))}
   </div>
 )
 

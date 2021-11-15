@@ -8,11 +8,10 @@ const AllRecipes = () => {
   const recipes = data.allContentfulRecipe.nodes
 
   return (
-    <div>
-      <h4>all recipes</h4>
-      <TagsList />
-      <RecipesList />
-    </div>
+    <section className="recipes-container">
+      <TagsList recipes={recipes} />
+      <RecipesList recipes={recipes} />
+    </section>
   )
 }
 export default AllRecipes
