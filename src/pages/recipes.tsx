@@ -5,7 +5,9 @@ import Layout from '../components/Layout'
 
 const Recipes = () => (
   <Layout>
-    <AllRecipes />
+    <main className="page">
+      <AllRecipes />
+    </main>
   </Layout>
 )
 

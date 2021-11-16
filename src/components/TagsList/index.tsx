@@ -28,7 +28,7 @@ const TagsList = ({ recipes }: TagsListProps) => {
       <h4>recipes</h4>
       <div className="tags-list">
         {newTags.map((tag: any, index: any) => (
-          <Link to={`/${tag[0]}`} key={index}>
+          <Link to={`/tags/${tag[0]}`} key={index}>
             {tag[0]} ({tag[1]})
           </Link>
         ))}
