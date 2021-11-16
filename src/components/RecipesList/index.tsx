@@ -2,6 +2,8 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 
+import slugify from 'slugify'
+
 type RecipesProps = {
   title: string
   cookTime: number
@@ -20,7 +22,11 @@ type RecipesListProps = {
 const RecipesList = ({ recipes }: RecipesListProps) => (
   <div className="recipes-list">
     {recipes.map((item, index) => (
-      <Link className="recipe" key={index} to={`/${item.title}`}>
+      <Link
+        className="recipe"
+        key={index}
+        to={`/${slugify(item.title, { lower: true })}`}
+      >
         <GatsbyImage
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
