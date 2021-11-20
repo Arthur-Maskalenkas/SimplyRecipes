@@ -20,7 +20,7 @@ const Index = () => (
         <div className="hero-container">
           <div className="hero-text">
             <h1>simply recipes</h1>
-            <h4>no fluff, just recipes</h4>
+            <h2>no fluff, just recipes</h2>
           </div>
         </div>
       </header>

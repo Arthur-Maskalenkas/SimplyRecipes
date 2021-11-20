@@ -25,7 +25,7 @@ const TagsList = ({ recipes }: TagsListProps) => {
 
   return (
     <div className="tag-container">
-      <h4>recipes</h4>
+      <h1>recipes</h1>
       <div className="tags-list">
         {newTags.map((tag: any, index: any) => (
           <Link to={`/tags/${tag[0]}`} key={index}>

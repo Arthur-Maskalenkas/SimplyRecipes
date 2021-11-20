@@ -385,7 +385,7 @@ form > *:last-child {
   transition: var(--transition);
 }
 .active-link {
-  color: var(--primary-500);
+  color: blue;
 }
 .contact-link {
   display: flex;
@@ -452,7 +452,8 @@ form > *:last-child {
 }
 .page-footer span,
 .page-footer a {
-  color: var(--primary-500);
+  font-size: 14px;
+  color: #ffffff
 }
 
 /*#########*/
@@ -546,6 +547,10 @@ form > *:last-child {
   text-align: center;
 }
 
+.hero-text h2{
+  font-size: 28px;
+}
+
 @media only screen and (min-width: 768px) {
   .hero-text h1 {
     font-size: 4rem;
@@ -570,8 +575,12 @@ form > *:last-child {
   order: 1;
   display: flex;
   flex-direction: column;
-  /* background: blue; */
 }
+
+.tag-container h1 {
+  font-size: 28px;
+}
+
 .tags-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -585,9 +594,13 @@ form > *:last-child {
   display: block;
   color: var(--grey-800);
   transition: var(--transition);
+
+  padding: 10px 0;
 }
 .tags-list a:hover {
   color: var(--primary-500);
+
+  background-color: white;
 }
 .recipe {
   display: block;
@@ -662,10 +675,12 @@ form > *:last-child {
   padding-bottom: 3rem;
 }
 .tag {
-  background: var(--grey-700);
+  background: #72777f;
   border-radius: var(--borderRadius);
   text-align: center;
   color: var(--white);
+  font-weight: 800;
+  
   transition: var(--transition);
   padding: 0.75rem 0;
 }
@@ -783,6 +798,6 @@ form > *:last-child {
 .single-tool {
   border-bottom: 1px solid var(--grey-500);
   padding-bottom: 0.75rem;
-  color: var(--primary-500);
+  color: blue;
   text-transform: capitalize;
 }

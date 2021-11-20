@@ -21,7 +21,11 @@ const NavBar = () => {
           <Link to="/">
             <img src={logo} alt="simply recipes" />
           </Link>
-          <button className="nav-btn" onClick={() => handleMenu(!isOpen)}>
+          <button
+            className="nav-btn"
+            aria-label="Open menu"
+            onClick={() => handleMenu(!isOpen)}
+          >
             <FaAlignJustify />
           </button>
         </div>
