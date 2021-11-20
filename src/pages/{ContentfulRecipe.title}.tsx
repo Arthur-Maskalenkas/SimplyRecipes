@@ -4,8 +4,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/Layout'
 import slugify from 'slugify'
+import Seo from '../components/Seo/Seo'
 
-const RecipeTemplate = ({ data }) => {
+const RecipeTemplate = ({ data }: any) => {
   const {
     title,
     cookTime,
@@ -21,13 +22,13 @@ const RecipeTemplate = ({ data }) => {
 
   return (
     <Layout>
-      {' '}
+      <Seo title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}
           <section className="recipe-hero">
             <GatsbyImage
-              image={pathToImage}
+              image={pathToImage!}
               alt={title}
               className="about-img"
             />
@@ -55,7 +56,7 @@ const RecipeTemplate = ({ data }) => {
               {/* tags */}
               <p className="recipe-tags">
                 Tags :
-                {tags.map((tag, index) => {
+                {tags.map((tag: any, index: any) => {
                   const slug = slugify(tag, { lower: true })
 
                   return (
@@ -71,7 +72,7 @@ const RecipeTemplate = ({ data }) => {
           <section className="recipe-content">
             <article>
               <h4>instructions</h4>
-              {instructions.map((item, index) => {
+              {instructions.map((item: any, index: any) => {
                 return (
                   <div key={index} className="single-instruction">
                     <header>
@@ -86,7 +87,7 @@ const RecipeTemplate = ({ data }) => {
             <article className="second-column">
               <div>
                 <h4>ingredients</h4>
-                {ingredients.map((item, index) => {
+                {ingredients.map((item: any, index: any) => {
                   return (
                     <p key={index} className="single-ingredient">
                       {item}
@@ -96,7 +97,7 @@ const RecipeTemplate = ({ data }) => {
               </div>
               <div>
                 <h4>tools</h4>
-                {tools.map((item, index) => {
+                {tools.map((item: any, index: any) => {
                   return (
                     <p key={index} className="single-tool">
                       {item}

@@ -7,12 +7,14 @@ import Layout from '../components/Layout'
 import setupTags from '../utils/setupTags'
 
 import slugify from 'slugify'
+import Seo from '../components/Seo/Seo'
 
 const Tags = ({ data }: any) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
 
   return (
     <Layout>
+      <Seo title="Tags" description="tags" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag: any, index: any) => {

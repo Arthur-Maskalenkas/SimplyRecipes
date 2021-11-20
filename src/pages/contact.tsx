@@ -3,12 +3,14 @@ import * as React from 'react'
 
 import Layout from '../components/Layout'
 import RecipesList from '../components/RecipesList'
+import Seo from '../components/Seo/Seo'
 
 const Contact = ({ data }: any) => {
   const recipes = data.allContentfulRecipe.nodes
 
   return (
     <Layout>
+      <Seo title="Contact" description="look all forms for contact us" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">

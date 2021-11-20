@@ -3,9 +3,11 @@ import * as React from 'react'
 
 import Layout from '../components/Layout'
 import AllRecipes from '../components/AllRecipes'
+import Seo from '../components/Seo/Seo'
 
 const Index = () => (
   <Layout>
+    <Seo title="Home" description="Nice and clean recipes site" />
     <main className="page">
       <header className="hero">
         <StaticImage

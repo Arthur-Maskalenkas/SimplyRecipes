@@ -19,6 +19,7 @@ module.exports = {
     simpleData: ['item 1', 'item 2']
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
